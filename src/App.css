@@ -1,0 +1,10 @@
+.editInfo {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #d9d9d9;
+  outline: #40a9ff;
+  border-radius: 3px;
+}
+.editInfo:focus {
+  border: 1px solid #40a9ff;
+}
