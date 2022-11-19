@@ -31,17 +31,6 @@ const Controller = ({
       color: "#FF0000",
       cursor: "pointer",
     },
-    icons: {
-      fontSize: "20px",
-      color: "#838383",
-      cursor: "pointer",
-    },
-    iconsDelete: {
-      fontSize: "20px",
-      color: "#838383",
-      borderRight: "1px solid transparent",
-      cursor: "pointer",
-    },
   };
   return (
     <div>
@@ -57,6 +46,7 @@ const Controller = ({
         </Col>
         <Col span={8} style={styles.iconsArea}>
           <EditFilled
+            className="editIcon"
             onClick={() => {
               setOpen((current) => !current);
               editInfo(id);
@@ -65,10 +55,7 @@ const Controller = ({
           />
         </Col>
         <Col span={8} style={styles.iconsArea}>
-          <DeleteFilled
-            onClick={() => deleteUser(id)}
-            style={styles.iconsDelete}
-          />
+          <DeleteFilled className="deleteIcon" onClick={() => deleteUser(id)} />
         </Col>
       </Row>
     </div>

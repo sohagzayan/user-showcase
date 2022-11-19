@@ -8,3 +8,24 @@
 .editInfo:focus {
   border: 1px solid #40a9ff;
 }
+
+.deleteIcon {
+  font-size: 20px;
+  color: #838383;
+  border-right: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2 ease-in;
+}
+.editIcon {
+  font-size: 20px;
+  color: #838383;
+  cursor: pointer;
+  transition: all 0.2 ease-in;
+}
+
+.editIcon:hover {
+  color: #1890ff;
+}
+.deleteIcon:hover {
+  color: #1890ff;
+}
