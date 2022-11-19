@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MailOutlined, PhoneOutlined, GlobalOutlined } from "@ant-design/icons";
 import { Col } from "antd";
 import Controller from "./Controller";
 
-const User = ({ user, deleteUser, open, setOpen }) => {
+const User = ({ user, deleteUser, open, setOpen, editInfo }) => {
   const [like, setLike] = useState(false);
   const { name, website, username, phone, email, id } = user;
 
@@ -60,6 +60,7 @@ const User = ({ user, deleteUser, open, setOpen }) => {
           </div>
         </div>
         <Controller
+          editInfo={editInfo}
           like={like}
           setLike={setLike}
           open={open}

@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Modal, Col, Row } from "antd";
+import { Col, Row } from "antd";
 
-const InputField = ({ type, title, placeholder }) => {
+const InputField = ({ type, title, placeholder, onChange, onChangeValue }) => {
   return (
     <Row
       style={{ display: "flex", alignItems: "center", marginBottom: "25px" }}
@@ -13,7 +13,13 @@ const InputField = ({ type, title, placeholder }) => {
         </label>
       </Col>
       <Col span={18}>
-        <input type={type} className="editInfo" placeholder={placeholder} />
+        <input
+          value={onChangeValue}
+          onChange={(e) => onChange(e.target.value)}
+          type={type}
+          className="editInfo"
+          placeholder={placeholder}
+        />
       </Col>
     </Row>
   );

@@ -7,7 +7,15 @@ import {
   DeleteFilled,
 } from "@ant-design/icons";
 
-const Controller = ({ deleteUser, id, open, setOpen, like, setLike }) => {
+const Controller = ({
+  deleteUser,
+  id,
+  open,
+  setOpen,
+  like,
+  setLike,
+  editInfo,
+}) => {
   /* Styles object */
   const styles = {
     root: {
@@ -49,7 +57,10 @@ const Controller = ({ deleteUser, id, open, setOpen, like, setLike }) => {
         </Col>
         <Col span={8} style={styles.iconsArea}>
           <EditFilled
-            onClick={() => setOpen((current) => !current)}
+            onClick={() => {
+              setOpen((current) => !current);
+              editInfo(id);
+            }}
             style={styles.icons}
           />
         </Col>

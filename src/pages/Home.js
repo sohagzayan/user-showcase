@@ -7,6 +7,7 @@ import EditUser from "../components/EditUser";
 const Home = () => {
   /* store all user from user state  */
   const [users, setUsers] = useState([]);
+  const [currentEditModeData, setCurrentEditModeData] = useState({});
   const [open, setOpen] = useState(false);
 
   /* get 10 user from api using axios get method */
@@ -33,12 +34,20 @@ const Home = () => {
     setUsers(usered);
   };
 
+  /* Edit info current data*/
+  const editInfo = async (id) => {
+    const URL = `https://jsonplaceholder.typicode.com/users/${id}`;
+    const { data } = await axios.get(URL);
+    setCurrentEditModeData(data);
+  };
+
   return (
     <div style={styles.root}>
       <div>
         <Row gutter={25}>
           {users.map((u, index) => (
             <User
+              editInfo={editInfo}
               open={open}
               setOpen={setOpen}
               deleteUser={deleteUser}
@@ -48,7 +57,11 @@ const Home = () => {
           ))}
         </Row>
       </div>
-      <EditUser open={open} setOpen={setOpen} />
+      <EditUser
+        open={open}
+        setOpen={setOpen}
+        currentEditModeData={currentEditModeData}
+      />
     </div>
   );
 };
