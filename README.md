@@ -1,6 +1,6 @@
-# ATG World Fully Responsive
+# User Showcase Fully Responsive
 
-## Project URL [ATG WORD](https://user-showcase.vercel.app/).
+## Project URL [USER SHOWCASE](https://user-showcase.vercel.app/).
 
 ## Preview
 
@@ -15,7 +15,7 @@
 
 ## Development
 
-#### Technoligies used in this project are given below
+#### Technology used in this project are given below
 
 ### Front-End
 
